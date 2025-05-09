@@ -1176,7 +1176,16 @@ function toggleOtherAdviceFields() {
 <input type="text" id="survey_leader_position" name="ตำแหน่ง" >
 <label for="survey_leader_phone">โทรศัพท์</label>
 <input type="text" id="survey_leader_phone" name="โทรศัพท์" >
+
+<label><input type="file"  name="fileUpload1" accept="image/*" >รูปภาพที่ 1 </label>
+<label><input type="file"  name="fileUpload2" accept="image/*" >รูปภาพที่ 2 </label>
+<label><input type="file"  name="fileUpload3" accept="image/*" >รูปภาพที่ 3 </label>
+<label><input type="file"  name="fileUpload4" accept="image/*" >รูปภาพที่ 4 </label>
+<label><input type="file"  name="fileUpload5" accept="image/*" >รูปภาพที่ 5 </label>
+<label><input type="file"  name="fileUpload6" accept="image/*" >รูปภาพที่ 6 </label>
 </div>
+
+
           
       <button type="submit">ส่งข้อมูล</button>
     </form>
@@ -1195,7 +1204,7 @@ function toggleOtherAdviceFields() {
        let formData = new FormData(this); // สร้าง FormData จากฟอร์ม
 
        // ส่งข้อมูลไปยัง Google Apps Script Web App
-       fetch('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', {
+       fetch('https://script.google.com/macros/s/AKfycbw6ucmlbwgtt0uJ4GZCQ7aDELK62x6jlucmREevBLfEHb90-3A4lAFPqZjcUupkxJ5JVg/exec', {
            method: 'POST',
            body: formData
        })
