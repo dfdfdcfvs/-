@@ -1196,18 +1196,12 @@ function toggleOtherAdviceFields() {
 
 
           
-      <button type="submit">ส่งข้อมูล</button>
-    </form>
-
-    <div class="confirmation" id="confirmation-message">
-      ✅ ขอบคุณสำหรับการกรอกข้อมูล!
-    </div>
-
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="iframeLoaded()"></iframe>
-  </div>
-    </div>
+<button type="submit">ส่งข้อมูล</button>
+<div class="confirmation">✅ ขอบคุณสำหรับการกรอกข้อมูล!</div>
+</form>
 
 <script>
+
 document.getElementById("uploadForm").addEventListener("submit", async function(event) {
   event.preventDefault();
   
