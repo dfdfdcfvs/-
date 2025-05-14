@@ -376,8 +376,8 @@ otherInputGroup4.style.display = this.checked ? 'block' : 'none';
     เกิดการฉีกขาดของจุดเชื่อมต่อโครงสร้างไม้ (บริเวณ)
   </label>
   <label>
-    <input type="radio" name="Wooden_structure" value="เกิดการวิบัติของชิ้นส่วนโครงสร้างไม้เช่น การฉีกขาดขนานเสี้ยน การฉีกขาดตั้งฉากเสี้ยน การหัก"  onchange="toggleWoodFields()">
-    เกิดการวิบัติของชิ้นส่วนโครงสร้างไม้เช่น การฉีกขาดขนานเสี้ยน การฉีกขาดตั้งฉากเสี้ยน การหัก
+    <input type="radio" name="Wooden_structure" value="เกิดการวิบัติของชิ้นส่วนโครงสร้างไม้เช่น การฉีกขาดขนานเสี้ยน การฉีกขาดตั้งฉากเสี้ยน การหัก เป็นต้น"  onchange="toggleWoodFields()">
+    เกิดการวิบัติของชิ้นส่วนโครงสร้างไม้เช่น การฉีกขาดขนานเสี้ยน การฉีกขาดตั้งฉากเสี้ยน การหัก เป็นต้น
   </label>
 </div>
           
@@ -393,7 +393,7 @@ otherInputGroup4.style.display = this.checked ? 'block' : 'none';
 function toggleWoodFields() {
   const selected = document.querySelector('input[name="Wooden_structure"]:checked')?.value;
   document.getElementById('wood_damage_area_group').style.display = (selected === 'เกิดการฉีกขาดของจุดเชื่อมต่อโครงสร้างไม้ (บริเวณ)') ? 'block' : 'none';
-  document.getElementById('wood_damage_description_group').style.display = (selected?.includes('เกิดการวิบัติของชิ้นส่วนโครงสร้างไม้')) ? 'block' : 'none';
+  document.getElementById('wood_damage_description_group').style.display = (selected?.includes('เกิดการวิบัติของชิ้นส่วนโครงสร้างไม้เช่น การฉีกขาดขนานเสี้ยน การฉีกขาดตั้งฉากเสี้ยน การหัก เป็นต้น')) ? 'block' : 'none';
 }
 </script>
 
@@ -1215,7 +1215,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
     }
   }
 
-  const response = await fetch('https://script.google.com/macros/s/AKfycbxJd_PImwyTlh-LhUESqQZLyAgY8nXGvSwWnvOhARgO8btwyuLm6Ee3Ajtec9kEPFFcYw/exec', {
+  const response = await fetch('https://script.google.com/macros/s/AKfycbyuh6Ovr03wq31bSpTZndrhU_y_2qvR9uuQbZwXgc3PMnQ3XMhS2hx69rpsB9GV1hI-ZA/exec', {
     method: 'POST',
     body: formData
   });
