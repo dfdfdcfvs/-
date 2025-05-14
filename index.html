@@ -100,7 +100,6 @@ button:hover {
 </head>
 <body>
   <form id="uploadForm" enctype="multipart/form-data">
-<form id="uploadForm">
     <div class="container">
         <h1>แบบสำรวจความเสียหายขั้นต้นของโครงสร้างอาคาร หลังจากเหตุการณ์แผ่นดินไหว</h1>
   <img src="https://i.imgur.com/OeH611n.png" alt="รูปจากเครื่อง" width="1000">
@@ -180,7 +179,7 @@ button:hover {
 </div>
 <div id="otherInputGroup1" style="display: none;" class="form-group">
   <label for="other_building_usage1">การใช้สอยอาคาร อื่นๆ</label>
-  <input type="text" id="other_building_usage1" name="other_building_usageๅ">
+  <input type="text" id="other_building_usage1" name="other_building_usage1">
 </div>
 <script>
   const otherCheckbox1 = document.getElementById('otherCheckbox1');
@@ -209,7 +208,7 @@ button:hover {
 <input type="text" id="postcode" name="postcode"  placeholder="เช่น 30000">
 <label for="lat">ละติจูด (Latitude)</label>
 <input type="text" id="lat" name="lat" placeholder="เช่น 14.9791">
-<label for="lng">ลองจิจูด (Longitude)</label>
+<label for="lng">ลองติจูด (Longitude)</label>
 <input type="text" id="lng" name="lng" placeholder="เช่น 102.0978">
 
 <!-- ส่วนที่ 2 ข้อมูลทางกายภาพของอาคาร -->
@@ -627,15 +626,15 @@ function toggleBeamColumnJointFields() {
 <label for="column_damage">ช่วงเสา</label>
 <div class="compact-radio">
   <label>
-    <input type="radio" id="column_damage_1" name="column_damage_area_1" value="ไม่มี/มีรอยแตกร้าวขนาดเล็ก" onchange="toggleColumnDamageFields()">
+    <input type="radio" id="column_damage_1" name="column_damage" value="ไม่มี/มีรอยแตกร้าวขนาดเล็ก" onchange="toggleColumnDamageFields()">
     ไม่มี/มีรอยแตกร้าวขนาดเล็ก
   </label>
   <label>
-    <input type="radio" id="column_damage_2" name="column_damage_area_1" value="มีรอยแตกร้าวเห็นได้ชัดเจน" onchange="toggleColumnDamageFields()">
+    <input type="radio" id="column_damage_2" name="column_damage" value="มีรอยแตกร้าวเห็นได้ชัดเจน" onchange="toggleColumnDamageFields()">
     มีรอยแตกร้าวเห็นได้ชัดเจน
   </label>
   <label>
-    <input type="radio" id="column_damage_3" name="column_damage_area_1" value="มีรอยฉีกขาดอย่างรุนแรง" onchange="toggleColumnDamageFields()">
+    <input type="radio" id="column_damage_3" name="column_damage" value="มีรอยฉีกขาดอย่างรุนแรง" onchange="toggleColumnDamageFields()">
     มีรอยฉีกขาดอย่างรุนแรง
   </label>
 </div>
@@ -831,7 +830,7 @@ function toggleBeamStructureFields() {
 </div>
 <script>
 function toggleColumnStructureFields() {
-  const radios = document.getElementsByName('Column_structure_part');
+  const radios = document.getElementsByName('column_structure_part');
   let value = '';
   for (let r of radios) {
     if (r.checked) {
@@ -962,7 +961,7 @@ function toggleShearPlateFields() {
 </div>
 <script>
 function toggleBeamColumnShearFields() {
-  const radios = document.getElementsByName('ส่วนโครงสร้าง  (shear_damage)');
+  const radios = document.getElementsByName('shear_damage');
   const value = Array.from(radios).find(r => r.checked)?.value;
   // Hide all damage area fields first
   document.getElementById('shear_damage_area_1_group').style.display = 'none';
