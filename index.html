@@ -7,7 +7,7 @@
      <style>
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1e3a8a; /* สีพื้นหลังสีน้ำเงิน */
+  background-color: #1e3a8a;
   margin: 0;
   padding: 0;
   color: #333;
@@ -49,7 +49,6 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 8px;
   background: #f9f9f9;
-  max-width: 995px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -59,28 +58,18 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  align-items: flex-start; /* ชิดซ้าย */
-  margin-left: 0; /* ชิดซ้ายสุด */
+  align-items: flex-start;
 }
 
 .compact-radio label,
 .compact-checkbox label {
   display: flex;
-  align-items: center; /* จัดตำแหน่งให้ช่องเลือกและข้อความอยู่กลางแนวตั้ง */
+  align-items: center;
   gap: 5px;
-  font-weight: normal; /* ไม่เน้นข้อความ */
+  font-weight: normal;
   white-space: nowrap;
-  margin-left: 0; /* ให้ตำแหน่งข้อความเริ่มต้นที่เดียวกัน */
 }
 
-.compact-radio label input,
-.compact-checkbox label input {
-  flex-shrink: 0; /* ป้องกันไม่ให้ช่องเลือกย่อขนาด */
-  margin-right: 5px; /* เพิ่มช่องว่างระหว่าง input กับข้อความ */
-  width: auto; /* ไม่ให้ขยายขนาดช่องเลือก */
-  height: auto; /* ไม่ให้ขยายขนาดช่องเลือก */
-  flex-grow: 0; /* ป้องกันไม่ให้ช่องเลือกขยายขนาด */
-}
 button {
   padding: 12px 20px;
   background-color: #64b5f6;
@@ -96,22 +85,61 @@ button {
 button:hover {
   background-color: #42a5f5;
 }
-/* ลดขนาดตัวหนังสือบนมือถือ */
+
+/* Responsive for Mobile */
 @media (max-width: 600px) {
   h1 {
-    font-size: 20px; /* ลดหัวข้อให้เล็กลง */
+    text-align: center;
+    color: #5c6bc0;
+    font-size: 26px;
+    margin-bottom: 20px;
   }
+
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
   .form-group label {
-    font-size: 14px; /* ลดขนาดตัวหนังสือ label */
+    font-weight: bold;
+    font-size: 16px;
   }
+
   .form-group input,
   .form-group select,
   .form-group textarea {
-    font-size: 14px; /* ลดขนาดตัวหนังสือในช่องกรอก */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
   }
+
+  .compact-radio,
+  .compact-checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+
   button {
-    font-size: 16px; /* ลดขนาดตัวหนังสือปุ่ม */
-    padding: 10px 15px; /* ลด padding ให้พอดี */
+    padding: 12px 20px;
+    background-color: #64b5f6;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #42a5f5;
   }
 }
   </style>
