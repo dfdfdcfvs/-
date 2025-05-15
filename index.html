@@ -68,18 +68,19 @@ h1 {
   display: flex;
   align-items: center; /* จัดตำแหน่งให้ช่องเลือกและข้อความอยู่กลางแนวตั้ง */
   gap: 5px;
-  font-weight: normal; /* ไม่เน้นข้อความ */
-  white-space: nowrap;
-  margin-left: 0; /* ให้ตำแหน่งข้อความเริ่มต้นที่เดียวกัน */
+  font-weight: normal;
+  white-space: normal; /* ให้ข้อความขึ้นบรรทัดใหม่ได้ */
+  margin-left: 0;
+  flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่เมื่อยาวเกิน */
 }
 
 .compact-radio label input,
 .compact-checkbox label input {
-  flex-shrink: 0; /* ป้องกันไม่ให้ช่องเลือกย่อขนาด */
-  margin-right: 5px; /* เพิ่มช่องว่างระหว่าง input กับข้อความ */
-  width: auto; /* ไม่ให้ขยายขนาดช่องเลือก */
-  height: auto; /* ไม่ให้ขยายขนาดช่องเลือก */
-  flex-grow: 0; /* ป้องกันไม่ให้ช่องเลือกขยายขนาด */
+  flex-shrink: 0;
+  margin-right: 5px;
+  width: auto;
+  height: auto;
+  flex-grow: 0;
 }
 button {
   padding: 12px 20px;
