@@ -1225,8 +1225,10 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
 
     const result = await response.json();
     showCustomPopup("✅ ขอบคุณสำหรับการกรอกข้อมูล");
+    this.reset(); // รีเซ็ตฟอร์มหลังจากส่งสำเร็จ
   } catch (error) {
     showCustomPopup("❌ มีข้อผิดพลาดในการส่งข้อมูล");
+    this.reset(); // รีเซ็ตฟอร์มหลังจากส่งล้มเหลว
   }
 });
 
@@ -1253,7 +1255,7 @@ function showCustomPopup(message) {
     setTimeout(() => {
       popup.style.display = "none";
     }, 500);
-  }, 3000);
+  }, 5000); // ค้างนาน 5 วินาที
 }
 </script>
 </body>
