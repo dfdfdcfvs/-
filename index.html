@@ -1199,8 +1199,6 @@ function toggleOtherAdviceFields() {
 
           
 <button type="submit">ส่งข้อมูล</button>
-<div class="confirmation">✅ ขอบคุณสำหรับการกรอกข้อมูล!</div>
-</form>
 
 <script>
 
@@ -1218,7 +1216,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
     }
   }
 
-  const response = await fetch('https://script.google.com/macros/s/AKfycbx6XFOEM11DrDw9fmGTJMBRwGrWDN0Xz4b8-WiQT3BHnWNqV02sK1ApA3q0zUMXZKQRvQ/exec', {
+  const response = await fetch('https://script.google.com/macros/s/AKfycbze1WTKFBFNyr-hIBtj1PAvS6-E2ag74dWtHPACYGH_3E3Ku6x5zN7RPSkS8ovxOcO6LQ/exec', {
     method: 'POST',
     body: formData
   });
