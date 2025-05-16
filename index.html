@@ -53,30 +53,41 @@ h1 {
   width: 100%;
   box-sizing: border-box;
 }
-.compact-radio, .compact-checkbox {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
+.compact-radio,
+.compact-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 5px;
+}
 
-    .compact-radio label, .compact-checkbox label {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-    }
+.compact-radio label,
+.compact-checkbox label {
+  display: flex;
+  align-items: flex-start; /* ข้อความชิดกับปุ่ม */
+  gap: 10px;
+  font-weight: normal;
+  white-space: normal;
+  margin-left: 0;
+  flex-wrap: nowrap; /* ไม่ให้ขึ้นบรรทัดใหม่ในกลุ่มปุ่ม+ข้อความ */
+  max-width: 100%;
+}
 
-    .compact-radio label input, .compact-checkbox label input {
-      margin-top: 4px;
-      flex-shrink: 0;
-    }
+.compact-radio label input,
+.compact-checkbox label input {
+  flex-shrink: 0;
+  width: auto;
+  height: auto;
+  flex-grow: 0;
+}
 
-    .compact-radio label span, .compact-checkbox label span {
-      display: inline-block;
-      max-width: 100%;
-      overflow-wrap: break-word;
-      word-break: break-word;
-      line-height: 1.4;
-    }
+.compact-radio label span,
+.compact-checkbox label span {
+  display: inline-block;
+  max-width: calc(100% - 30px); /* ปรับตามขนาดปุ่ม */
+  overflow-wrap: break-word; /* ข้อความยาวตัดขึ้นบรรทัดใหม่ */
+  word-break: break-word; /* ตัดคำเมื่อยาวเกิน */
+}
 button {
   padding: 12px 20px;
   background-color: #64b5f6;
