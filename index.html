@@ -1209,6 +1209,9 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
   const formData = new FormData(this);
   const fileUploads = document.querySelectorAll('input[type="file"]');
 
+  // แสดงข้อความ "รอสักครู่ 🔁"
+  showCustomPopup("รอสักครู่ 🔁");
+
   for (let i = 0; i < fileUploads.length; i++) {
     const file = fileUploads[i].files[0];
     if (file) {
@@ -1255,7 +1258,7 @@ function showCustomPopup(message) {
     setTimeout(() => {
       popup.style.display = "none";
     }, 500);
-  }, 5000); // ค้างนาน 5 วินาที
+  }, message.includes("รอสักครู่") ? 60000 : 5000); // ค้างนาน 5 วินาที (หรือ 60 วินาทีถ้าเป็น "รอสักครู่")
 }
 </script>
 </body>
