@@ -65,25 +65,23 @@ h1 {
 .compact-checkbox label {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  font-weight: normal;
-  white-space: normal;
-  flex-wrap: nowrap;
+  gap: 8px; /* ระยะห่างระหว่างปุ่มกับข้อความ */
 }
 
 .compact-radio label input,
 .compact-checkbox label input {
   flex-shrink: 0;
-  margin-top: 3px; /* ปุ่มชิดบน */
+  margin-top: 2px; /* ปุ่มชิดบน */
 }
 
 .compact-radio label span,
 .compact-checkbox label span {
-  display: inline-block;
-  max-width: calc(100% - 30px); /* ข้อความชิดปุ่ม */
+  display: block;
+  flex-grow: 1;
+  max-width: 100%; /* ข้อความเต็มความกว้าง */
   overflow-wrap: break-word;
   word-break: break-word;
-  line-height: 1.4; /* ระยะห่างระหว่างบรรทัด */
+  line-height: 1.4;
 }
 
 button {
