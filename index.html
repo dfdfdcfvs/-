@@ -56,31 +56,30 @@ h1 {
 
 .compact-radio label,
 .compact-checkbox label {
-  display: flex;
-  align-items: flex-start; /* ชิดบน */
+  display: flex;           /* ให้เป็นแถวแนวนอน */
+  align-items: flex-start; /* ให้ปุ่มอยู่ชิดบรรทัดบน */
   gap: 5px;
   font-weight: normal;
   margin-left: 0;
-  flex-wrap: wrap;
 }
 
 .compact-radio label input,
 .compact-checkbox label input {
-  flex-shrink: 0;
+  flex-shrink: 0;          /* ไม่ยืด */
   margin-right: 5px;
   width: auto;
   height: auto;
   flex-grow: 0;
-  align-self: flex-start; /* ให้ช่องเลือกอยู่ชิดบน */
+  align-self: flex-start;  /* ชิดบรรทัดบน */
 }
 
 .compact-radio label span,
 .compact-checkbox label span {
-  display: inline;
-  word-break: break-word;
-  white-space: normal;
-  margin-left: 0; /* ลบการเว้นวรรคของข้อความบรรทัดใหม่ */
+  flex: 1 1 auto;          /* ให้ข้อความยืดเต็มพื้นที่ */
+  word-break: break-word;  /* ห่อคำเมื่อยาว */
+  white-space: normal;     /* ให้ข้อความห่อบรรทัดใหม่ */
 }
+
 button {
   padding: 12px 20px;
   background-color: #64b5f6;
